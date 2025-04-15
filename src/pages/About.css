@@ -1,0 +1,71 @@
+/* Timeline styling */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.timeline-content h5 {
+    color: var(--primary-color);
+}
+
+/* Partner logo effects */
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-year {
+        left: -30px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+}
